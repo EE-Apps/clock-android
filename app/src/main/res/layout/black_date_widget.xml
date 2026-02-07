@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_black_background"
+    android:clipToOutline="true">
+
+    <!-- ВЕСЬ БЛОК по центру, как TextView у погоды -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="14dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Число -->
+        <TextView
+            android:id="@+id/day_digit_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="44sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="0"/>
+
+        <!-- Правая часть -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/month_abbr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#CCFFFFFF"
+                android:textStyle="bold"
+                android:text="JAN"/>
+
+            <TextView
+                android:id="@+id/day_of_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#CCFFFFFF"
+                android:text="Monday"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

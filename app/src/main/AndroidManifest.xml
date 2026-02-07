@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/clock"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/clock"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClockEE"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="32" >
+        
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".widget.config.WeatherClockWidgetConfigActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".widget.config.WeatherWidgetConfigActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".widget.config.BlackClockWidgetConfigActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".widget.config.BlackDateWidgetConfigActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".WeatherClockWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/weather_clock_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widget.BlackClockWidget"
+            android:label="Виджет времени"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/black_clock_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".widget.BlackDateWidget"
+            android:label="Виджет даты"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/black_date_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".widget.BlackWeatherWidget"
+            android:label="Виджет погоды"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/black_weather_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

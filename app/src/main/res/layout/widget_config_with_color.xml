@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Прозрачность"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBarTransparency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Цвет фона"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:spacing="8dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/colorBlack"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⬤"
+            android:textSize="20sp"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/colorDarkGray"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⬤"
+            android:textSize="20sp"
+            android:background="#333333"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/colorGray"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⬤"
+            android:textSize="20sp"
+            android:background="#666666"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/colorLightGray"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⬤"
+            android:textSize="20sp"
+            android:background="#999999"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:spacing="8dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/colorRed"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⬤"
+            android:textSize="20sp"
+            android:background="#CC0000"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/colorGreen"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⬤"
+            android:textSize="20sp"
+            android:background="#00CC00"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/colorBlue"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⬤"
+            android:textSize="20sp"
+            android:background="#0066FF"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/colorOrange"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⬤"
+            android:textSize="20sp"
+            android:background="#FF9900"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:spacing="8dp">
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="По-умолчанию"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Применить"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+</LinearLayout>
