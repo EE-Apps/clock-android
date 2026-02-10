@@ -46,6 +46,8 @@ public class MainActivity extends Activity {
         settings.setAllowContentAccess(true);
         settings.setAllowContentAccess(true);
         settings.setDisplayZoomControls(false);
+        settings.setAllowFileAccessFromFileURLs(true);
+        settings.setAllowUniversalAccessFromFileURLs(true);
 
         // Разрешаем смешанный контент (HTTP внутри HTTPS и наоборот), если нужно
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
