@@ -55,11 +55,29 @@ window.pages = [
         id: 'settings',
         title: 'Настройки',
         icon: 'img/ui/settings.svg',
+        leftBtn: 'back',
         noBottom: true,
     },
 ];
 
-createNav(pages);
+// Wait for pages.js to be ready before initializing navigation
+function initializeNav() {
+    if (window.pagesManager && typeof window.pagesManager.createBtnList === 'function') {
+        console.log('Initializing navigation...');
+        window.cnavMgr.init(pages);
+        window.cnavMgr.createNav(pages);
+    } else {
+        console.log('Waiting for pagesManager...');
+        window.addEventListener('pagesManagerReady', () => {
+            console.log('pagesManager ready, initializing navigation...');
+            window.cnavMgr.init(pages);
+            window.cnavMgr.createNav(pages);
+        }, { once: true });
+    }
+}
+
+// Initialize navigation
+initializeNav();
 
 
 // Инициализация настроек
